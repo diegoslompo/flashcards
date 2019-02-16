@@ -1,14 +1,17 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
 import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
+import { Button } from '../components/Button';
 import { MaterialIcons } from '@expo/vector-icons';
+import { colors } from '../utils/helpers';
+
 
 class HomeView extends Component {
  componentDidMount() {
  }
 
  static navigationOptions = {
-   title: 'Decks',
+   title: 'Baralhos',
  };
 
  render() {
@@ -26,7 +29,7 @@ class HomeView extends Component {
        </View>
        <View style={{ marginVertical: 10, flexGrow: 0 }}>
          <Button
-           title="Add Deck"
+           title="Adicionar ao Baralho"
            onPress={ev => this.props.navigation.navigate('AddDeck')}>
            <MaterialIcons name={'library-add'} size={24} color={colors.white} />
          </Button>

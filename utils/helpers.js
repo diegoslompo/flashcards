@@ -1,6 +1,30 @@
 import React, { Component } from 'react';
 import { AsyncStorage } from 'react-native';
 
+const defaultColors = {
+  black: '#000',
+  white: '#fff',
+  gray: '#ccc',
+  grayDark: '#666',
+  grayLight: '#eee',
+  blue: '#007bff',
+  blueDark: '#1c69bb',
+  green: '#28a745',
+  greenDark: '#27803b',
+  red: '#dc3545',
+  redDark: '#a52834',
+}
+export const colors = {
+  ...defaultColors,
+  state: {
+    primary: defaultColors.red,
+    primaryActive: defaultColors.blueDark,
+    danger: defaultColors.red,
+    dangerActive: defaultColors.redDark,
+    success: defaultColors.red,
+    successActive: defaultColors.greenDark,
+  },
+};
 
 const NOTIFICATION_KEY = 'Flashcards:notifications';
 const notification = {
