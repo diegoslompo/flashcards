@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View } from 'react-native';
+import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import { MaterialIcons } from '@expo/vector-icons';
 
 class HomeView extends Component {
