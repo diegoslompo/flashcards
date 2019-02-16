@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
-import HomeView from './views/Home';
+import HomeView from './components/Home';
 
 const Stack = {
   Home: {screen: HomeView},

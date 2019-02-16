@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { ActivityIndicator, StyleSheet, View, FlatList } from 'react-native';
+import DeckItem from './DeckItem';
+import Loading from './Loading';
 import { fetchData, storeData } from '../utils/api';
 import PropTypes from 'prop-types';
 
@@ -30,7 +32,10 @@ class DeckList extends Component {
     });
   }
 
-
+  state = {
+    decklist: {},
+    loading: false,
+  }
 
   componentWillUnmount() {
     this.updateRenderAfterNavigation
@@ -61,7 +66,11 @@ class DeckList extends Component {
   }
 
   render() {
-
+    if (this.state.loading) {
+      return (
+        <Loading />
+      )
+    } else {
       return (
         <View style={{ marginVertical: 5 }}>
           <FlatList
@@ -70,7 +79,7 @@ class DeckList extends Component {
             />
         </View>
       )
-
+    }
   }
 }
 
