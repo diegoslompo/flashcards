@@ -36,7 +36,36 @@ class Button extends Component {
   }
 }
 
-
+/**
+ * Style
+ */
+const styles = StyleSheet.create({
+  button: {
+    marginVertical: 5,
+    backgroundColor: colors.blue,
+  },
+  buttonBox: {
+    alignItems: 'center',
+    justifyContent: 'center',
+    flexDirection: 'row',
+  },
+  danger: {
+    backgroundColor: colors.red,
+  },
+  success: {
+    backgroundColor: colors.green,
+  },
+  disabled: {
+    backgroundColor: colors.gray,
+  },
+  buttonText: {
+    color: colors.white,
+    fontSize: 16,
+    fontWeight: 'bold',
+    marginVertical: 15,
+    marginHorizontal: 5,
+  },
+});
 
 Button.propTypes = {
   title: PropTypes.string.isRequired,

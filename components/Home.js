@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { View } from 'react-native';
 import { clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import { Button } from '../components/Button';
+import DeckList from './DeckList';
 import { MaterialIcons } from '@expo/vector-icons';
 import { colors } from '../utils/helpers';
 
