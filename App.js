@@ -1,34 +1,17 @@
 import React, { Component } from 'react';
-import {StyleSheet, Text, View, Button, StatusBar} from 'react-native';
+import { createStackNavigator, createAppContainer } from 'react-navigation';
+import HomeView from './views/Home';
 
+const Stack = {
+  Home: {screen: HomeView},
+};
 
-class HomeView extends Component {
+const HeaderNavigator = createStackNavigator(Stack);
 
-  static navigationOptions = {
-    title: 'Home',
-  };
-
-  render() {
-    return (
-      <View>
-        <StatusBar
-          barStyle="light-content"
-          backgroundColor="orange"
-        />
-        <Button title="Novo Dek"  />
-      </View>
-    );
-  }
-}
-
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
+/**
+ * Navigator
+ * @link https://review.udacity.com/#!/rubrics/1215/view
+ */
+const App = createAppContainer(HeaderNavigator);
 
 export default App;
