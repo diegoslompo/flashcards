@@ -45,6 +45,22 @@ class DeckItem extends Component {
   }
 }
 
+const styles = StyleSheet.create({
+  card: {
+    backgroundColor: colors.grayLight,
+    marginVertical: 5,
+    marginHorizontal: 10,
+  },
+  cardBox: {
+    alignItems: 'center',
+    marginVertical: 20,
+    marginHorizontal: 10,
+  },
+  cardTitle: {
+    fontSize: 20,
+    fontWeight: 'bold',
+  },
+});
 
 DeckItem.propTypes = {
   id: PropTypes.string.isRequired,
