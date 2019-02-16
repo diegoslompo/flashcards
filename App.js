@@ -2,10 +2,14 @@ import React, { Component } from 'react';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeView from './components/Home';
 import DeckView from './components/Deck';
+import AddDeckView from './components/AddDeck';
+import AddCardView from './components/AddCard';
 
 const Stack = {
   Home: {screen: HomeView},
   Deck: {screen: DeckView},
+  AddDeck: {screen: AddDeckView},
+  AddCard: {screen: AddCardView},
 };
 
 const HeaderNavigator = createStackNavigator(Stack);
