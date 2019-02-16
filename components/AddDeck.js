@@ -1,31 +1,25 @@
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
-import AddCard from './AddCard';
+import AddDeckComp from './AddDeckComp';
 
-class AddCardView extends Component {
-  state = {
-    id: '',
-  }
-
+class AddDeckView extends Component {
   static navigationOptions = ({ navigation }) => {
-    deckTitle = navigation.getParam('deckTitle');
+    const id = navigation.getParam('deckId');
     return {
-      title: `Novo Baralho ${deckTitle}`,
+      title: (id) ? 'Editar' : 'Adicionar',
     };
   };
-
-  componentDidMount() {
-    const id = this.props.navigation.getParam('deckId');
-    this.setState({ id });
-  }
+  static navigationOptions = {
+    title: 'Adicionar ao Baralho',
+  };
 
   render() {
     return (
       <View>
-        <AddCard id={this.state.id} navigation={this.props.navigation} />
+        <AddDeckComp navigation={this.props.navigation} />
       </View>
     );
   }
 }
 
-export default AddCardView;
+export default AddDeckView;
