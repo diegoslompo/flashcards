@@ -7,7 +7,7 @@ import { fetchData, storeData } from '../utils/api';
 import { colors } from '../utils/helpers';
 import PropTypes from 'prop-types';
 
- class Deck extends Component {
+ class DeckFeat extends Component {
    constructor(props) {
      super(props);
 
@@ -126,8 +126,8 @@ import PropTypes from 'prop-types';
    }
  }
 
- Deck.propTypes = {
+ DeckFeat.propTypes = {
    navigation: PropTypes.object.isRequired,
  };
 
-export default Deck;
+export default DeckFeat;
