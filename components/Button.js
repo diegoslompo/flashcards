@@ -43,6 +43,8 @@ const styles = StyleSheet.create({
   button: {
     marginVertical: 5,
     backgroundColor: colors.blue,
+    borderRadius: 60,
+    margin: 15,
   },
   buttonBox: {
     alignItems: 'center',

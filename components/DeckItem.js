@@ -47,9 +47,12 @@ class DeckItem extends Component {
 
 const styles = StyleSheet.create({
   card: {
-    backgroundColor: colors.grayLight,
+    backgroundColor: colors.white,
     marginVertical: 5,
     marginHorizontal: 10,
+    borderRadius: 8,
+    borderWidth: 1,
+    borderColor: colors.gray,
   },
   cardBox: {
     alignItems: 'center',

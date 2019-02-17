@@ -108,18 +108,10 @@ import PropTypes from 'prop-types';
              navigation={this.props.navigation} />
          </View>
          <View>
-           <Button disabled={!hasCards} title={'Start Quiz'} onPress={this.startQuiz}>
-             <MaterialIcons name={'playlist-play'} size={24} color={colors.white} />
-           </Button>
-           <Button title={'Add Card'} onPress={this.addCard}>
-             <MaterialIcons name={'playlist-add'} size={24} color={colors.white} />
-           </Button>
-           <Button title={'Edit Deck'} onPress={this.editDeck}>
-             <MaterialCommunityIcons name={'square-edit-outline'} size={24} color={colors.white} />
-           </Button>
-           <Button title={'Delete Deck'} styleType='danger' onPress={this.deleteDeck}>
-             <MaterialCommunityIcons name={'trash-can-outline'} size={24} color={colors.white} />
-           </Button>
+           <Button disabled={!hasCards} title={'Iniciar Quiz'}  styleType='success' onPress={this.startQuiz} />
+           <Button title={'Adicionar Cartão'} onPress={this.addCard}/>
+           <Button title={'Editar Baralho'} onPress={this.editDeck}/>
+           <Button title={'Remover Baralho'} styleType='danger' onPress={this.deleteDeck} />
          </View>
        </View>
      )

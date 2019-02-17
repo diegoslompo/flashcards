@@ -9,15 +9,15 @@ const decklist = [
   {
     key: '1',
     id: 'deck-1',
-    title: 'Deck 1',
+    title: 'Baralho',
     cards: [
       {
-        question: 'What is React?',
-        answer: 'A library for managing user interfaces',
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
       },
       {
-        question: 'Where do you make Ajax requests in React?',
-        answer: 'The componentDidMount lifecycle event',
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
       }
     ]
   }
