@@ -37,7 +37,7 @@ class DeckItem extends Component {
           onPress={this.onPress}>
           <View style={styles.cardBox}>
             <Text style={styles.cardTitle}>{this.props.title}</Text>
-            <Text>{`${this.props.cardsCount} cards`}</Text>
+            <Text>{`${this.props.cardsCount} Cartões`}</Text>
           </View>
         </TouchableHighlight>
       </Animated.View>

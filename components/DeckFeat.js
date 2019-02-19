@@ -16,7 +16,7 @@ import PropTypes from 'prop-types';
      });
    }
 
-   componentWillUnmount() {
+   componentWillMount() {
      this.updateRenderAfterNavigation;
    }
 
@@ -99,7 +99,7 @@ import PropTypes from 'prop-types';
      const { id, title, cardsCount } = this.state;
      const hasCards = cardsCount ? true : false;
      return (
-       <View>
+       <View key={id}>
          <View>
            <DeckItem
              id={id}

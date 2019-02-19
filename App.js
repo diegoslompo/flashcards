@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import { YellowBox } from 'react-native';
 import { createStackNavigator, createAppContainer } from 'react-navigation';
 import HomeView from './components/Home';
 import DeckView from './components/Deck';
 import QuizView from './components/Quiz';
 import AddDeckView from './components/AddDeck';
 import AddCardView from './components/AddCard';
+
+YellowBox.ignoreWarnings(['Warning: isMounted(...) is deprecated', 'Module RCTImageLoader']);
 
 const Stack = {
   Home: {screen: HomeView},

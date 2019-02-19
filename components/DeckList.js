@@ -7,9 +7,39 @@ import PropTypes from 'prop-types';
 
 const decklist = [
   {
-    key: '1',
-    id: 'deck-1',
-    title: 'Baralho',
+    key: '14',
+    id: 'deck-14',
+    title: 'Baralho 1',
+    cards: [
+      {
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
+      },
+      {
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
+      }
+    ]
+  },
+  {
+    key: '12',
+    id: 'deck-12',
+    title: 'Baralho 2',
+    cards: [
+      {
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
+      },
+      {
+        question: 'Sua Pergunta...?',
+        answer: 'RESPOSTA!',
+      }
+    ]
+  },
+  {
+    key: '18',
+    id: 'deck-18',
+    title: 'Baralho 3',
     cards: [
       {
         question: 'Sua Pergunta...?',
@@ -37,13 +67,13 @@ class DeckList extends Component {
     loading: false,
   }
 
-  componentWillUnmount() {
+  componentWillMount() {
     this.updateRenderAfterNavigation
   }
 
   renderDeckItem = (item) => {
     return (
-      <DeckItem id={item.id} title={item.title} cardsCount={item.cards.length} navigation={this.props.navigation} />
+      <DeckItem id={item.id} key={item.id} title={item.title} cardsCount={item.cards.length} navigation={this.props.navigation} />
     )
   }
 
