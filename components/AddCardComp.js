@@ -4,6 +4,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import { Button } from './Button';
 import { colors } from '../utils/helpers';
 import { fetchData, storeData } from '../utils/api';
+import {clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import PropTypes from 'prop-types';
 
 class AddCardComp extends Component {
@@ -16,6 +17,10 @@ class AddCardComp extends Component {
 
   onPress = (ev) => {
     const { question, answer } = this.state;
+
+    clearLocalNotification()
+      .then(setLocalNotification)
+
     if (question.length && answer.length) {
 
       fetchData(data => {
