@@ -3,6 +3,7 @@ import { StyleSheet, Text, View, TouchableHighlight } from 'react-native';
 import { MaterialIcons, MaterialCommunityIcons } from '@expo/vector-icons';
 import { Button } from './Button';
 import { fetchData, storeData } from '../utils/api';
+import {clearLocalNotification, setLocalNotification } from '../utils/helpers';
 import { colors } from '../utils/helpers';
 import PropTypes from 'prop-types';
 
@@ -56,6 +57,9 @@ class QuizComp extends PureComponent {
 
   componentDidMount() {
     this.fecthCards()
+
+    clearLocalNotification()
+      .then(setLocalNotification)
   }
 
   render() {
